@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618611515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1439225992}
@@ -735,15 +735,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439225991}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.03899819, z: 0, w: 0.99923927}
+  m_LocalPosition: {x: 5, y: 0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
   - {fileID: 618611516}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 4.47, z: 0}
 --- !u!54 &1439225993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -769,10 +769,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439225991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e6e38c0045107544a51f75dcdc0153b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8debd4a67d0ca2740a3f50ef99ec36e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
+  jumpforce: 999
+  rotationSpeed: 5
   rb: {fileID: 1439225993}
 --- !u!1 &1631701764
 GameObject:
