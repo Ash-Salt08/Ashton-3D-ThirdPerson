@@ -23,14 +23,14 @@ public class myPlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             
-            rb.AddForce(Vector3.forward * speed);
+            rb.AddForce(transform.forward * speed);
 
         }
         //If key "S" pressed
         if (Input.GetKey(KeyCode.S))
         {
             
-            rb.AddForce(Vector3.back * speed);
+            rb.AddForce(transform.forward * -speed);
 
         }
         //If key "A" pressed
