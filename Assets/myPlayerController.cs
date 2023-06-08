@@ -9,6 +9,7 @@ public class myPlayerController : MonoBehaviour
     public float jumpforce;
     public float rotationSpeed;
     public Rigidbody rb;
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +49,7 @@ public class myPlayerController : MonoBehaviour
 
         }
         //if space pressed while touching ground
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             //jump
             rb.AddForce(Vector3.up * jumpforce);
@@ -65,5 +66,16 @@ public class myPlayerController : MonoBehaviour
 
         }
 
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        isGrounded = true;
+    }
+
+
+    private void OnTriggerExit(Collider collision)
+    {
+        isGrounded = false;
     }
 }
